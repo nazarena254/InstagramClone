@@ -14,6 +14,8 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
+    # signals help decoupled applications to
+    # get notified when actions occur elsewhere in the framework
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
@@ -35,3 +37,29 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
+class Post(models.Model):
+    image = models.ImageField(upload_to='posts/')
+    title = models.CharField(max_length=50)
+    description = models.CharField(max_length=250, blank=True)
+    likes = models.ManyToManyField(User, related_name='likes', blank=True)
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='posts')
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    def save_post(self):
+        # Method to save images
+        self.save()
+
+    def delete_post(self):
+        # Method to delete our images
+        self.delete()
+   
+    def num_liked(self):
+        # Method to count likes
+        return self.likes.count()
+   
+    class Meta:
+        # Class method to display images by date published
+        ordering = ["-pk"]
+    
+    def __str__(self):
+        return self.title
