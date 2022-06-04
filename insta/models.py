@@ -16,6 +16,7 @@ class Profile(models.Model):
 
     # signals help decoupled applications to
     # get notified when actions occur elsewhere in the framework
+    # pre_save/post_save mthds are sent before or after a model’s save() method is called.
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
@@ -63,3 +64,28 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    comment = models.TextField()
+    post=models.ForeignKey(Post,related_name='comments',on_delete=models.CASCADE)
+    user=models.ForeignKey(Profile,related_name='comments',on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def save_comment(self):
+        self.save()
+
+    def delete_comment(self):
+        self.delete()
+
+    @classmethod
+    def get_comments(cls,id):
+        comments = cls.objects.filter(post__id=id)
+        return comments
+
+    def __str__(self):
+        return self.comment
+    class Meta:
+        ordering=["-pk"]
+
+
+
