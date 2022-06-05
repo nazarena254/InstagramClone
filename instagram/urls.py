@@ -13,9 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+#Django provides views that handle login, logout and password reset
+#django-registration requires models provided in the django-contrib-auth module.
+#That module handles all the authentication for the django application.
+
 from django.contrib import admin
 from django.urls import path,include
-# from django_registration.backends.one_step.views import RegistrationView
+from django_registration.backends.one_step.views import RegistrationView
 from django.contrib.auth.views import LogoutView,LoginView
 from django.contrib.auth import views as auth_views
 
@@ -23,6 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('insta.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    #django-registration provides registration form and requires login, logout, pwd reset templates
+    #to be stored in a template subfolder called registration
     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='/')), 
 ]
