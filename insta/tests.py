@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Profile,Post,Comment
+from .models import Profile,Post,Comment,Follow
 from django.contrib.auth.models import User
 
 # Create your tests here.
@@ -36,6 +36,25 @@ class PostTestClass(TestCase):
     def test_delete_post(self):
         self.post.delete_post()
         deleted_post = Post.objects.all()
-        self.assertTrue(len(deleted_post)==0)        
+        self.assertTrue(len(deleted_post)==0) 
+
+class CommentTestClass(TestCase):
+    def setUp(self):
+        self.user=User(username='naz')
+        self.user.save()
+        self.post=Post(id=1, likes=10, image='default.png', title='food', description='can be taken as meal or snack',user=self.profile)
+        self.comment=Comment(user=self.user,comment='nice post')
+    def test_instance(self):
+        self.assertTrue(isinstance(self.comment,Comment)) 
+
+class FollowTestCase(TestCase):
+    def setUp(self):
+        self.user=User(username='naz')
+        self.user.save()
+        self.follow=Follow(user=self.user, follower=20, followed=500)
+    def test_instance(self):
+        self.assertTrue(isinstance(self.follow, Follow))
+
+
 
  
