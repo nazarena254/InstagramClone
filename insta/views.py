@@ -101,7 +101,6 @@ def like_post(request,post_id):
 @login_required
 def search_results(request):
     posts=Post.objects.all()
-
     if 'search_profile' in request.GET and request.GET["search_profile"]:
         search_term = request.GET.get("search_profile")
         searched_profiles = Profile.search_profile(search_term)
