@@ -173,6 +173,7 @@ def update_profile(request, username):
     }
     return render(request, 'instagram/updated_profile.html', params)
 
+
 def follow(request,follow):
     if request.method == 'GET':
         user_follow=Profile.objects.get(pk=follow)
