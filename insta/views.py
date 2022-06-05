@@ -43,7 +43,7 @@ def signup_view(request):
 def welcome(request):
     posts=Post.objects.all()
     users = User.objects.exclude(id=request.user.id)
-    profiles=Profile.objects.all()[:5]
+    profiles=Profile.objects.all()[:6]
     if request.method=='POST':
         form=UploadImageForm(request.POST,request.FILES)
         if form.is_valid():
@@ -51,9 +51,7 @@ def welcome(request):
             post.user=request.user.profile
             post.save()
 
-
             return HttpResponseRedirect(request.path_info)
-
     else:
         form=UploadImageForm()
     return render(request, 'instagram/index.html',{'posts':posts,'form':form,'users':users,'profiles':profiles})
