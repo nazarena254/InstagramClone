@@ -23,34 +23,42 @@ Nazarena Wambura.</br>
 
 ## Behaviour Driven Development (BDD)
 1. Sign up to the application
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 | Click on sign up under login form   | username,password,email | user account and profile is created  | 
 
 2. log into the application 
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 | Enter details in the log in form   | username, password| Landing page is loaded is login is successful else an error message is shown  | 
 
+
 3. See profiles 
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 | For user profile, click on the profile icon on navbar,or click on other users username | Username| User is redirected to the profile pages  |  
 
 4. Follow and unfollow other users
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 | Click on button follow on their profiles | follow status| Increase number of followers by 1  | 
 
+
 5. Like and unlike a post
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 | Click on like icon on a post  | like status| Increase number of likes by 1 else reduces the number of likes by 1  |
 
 6. Comment on post
+
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
-| Click on icon comment on the posts | comment| The added comment is displayed  | 
+| Click on icon comment on the posts | comment| The added comment is displayed  |
 
 
 ## Setup/Installation Requirements
@@ -90,7 +98,7 @@ Nazarena Wambura.</br>
 
 ## Support & Contact Information
 For any further inquiries, bugs, contributions or comments, reach me at:<br>
-Email:[nancyngunjiri1@gmail.com]
+Email:<nancyngunjiri1@gmail.com>
 
 ### License
 [MIT License](https://github.com/nazarena254/InstagramClone/blob/master/LICENSE)
