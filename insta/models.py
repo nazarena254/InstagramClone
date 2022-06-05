@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+# https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/python
 
 # Create your models here.
 class Profile(models.Model):
@@ -45,6 +46,7 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='likes', blank=True)
     user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True, null=True)
+
 
     def save_post(self):
         # Method to save images
