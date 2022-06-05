@@ -114,7 +114,7 @@ def search_results(request):
 @login_required()
 def profile(request, username):
     current_user=request.user.profile
- 
+
     profile=Profile.objects.get(user=current_user.user)
     posts = request.user.profile.posts.all()
 
