@@ -59,7 +59,6 @@ def welcome(request):
 def logout_view(request):
     logout(request,"welcome.html")
 
-
 @login_required(login_url='/accounts/login/')
 def comment(request,post_id):
         current_user=request.user.profile
