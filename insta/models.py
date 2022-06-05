@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-# https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/python
 
 # Create your models here.
 class Profile(models.Model):
