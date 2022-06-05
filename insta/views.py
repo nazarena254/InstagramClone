@@ -88,7 +88,6 @@ def like_post(request,post_id):
     try:
         profile=Profile.objects.get(user=user.user)
         print(profile)
-
     except Profile.DoesNotExist:
         raise Http404()
     if post.likes.filter(id=user.user.id).exists():
