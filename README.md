@@ -69,19 +69,20 @@ Nazarena Wambura.</br>
 4.  Type code . or atom . based on the text editor you have and work on it.   
 
 ## Database
-1. Set up Database,and put your username and password in the code
+1. Set up Database(postgresql),and put your username and password in the code
 2. Make migrations
-    python3 manage.py makemigrations picture
+    python3 manage.py makemigrations
 3. Migrate
    python3 manage.py migrate 
        
 ## Running the Application
-1. Run main aplication  ###### python version will vary in future
-   * python3.9 manage.py runserver
+1. Run main aplication<br>    
+   * python3.9 manage.py runserver<br>
+    Note: python version will vary in future
 
 ## Creating Admins
-1. Creating Admin Locally
-    python manage.py createsuperuser. Then set username, email & password
+1. Creating Admin Locally<br>
+     python manage.py createsuperuser. Then set username, email & password
 
 2. Creating Django Admin   
      heroku run python manage.py createsuperuser. Then set username, email & password
