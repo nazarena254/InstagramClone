@@ -5,7 +5,7 @@ This is a Django web application. It is a clone of the instagram website. A user
 
 ## Author
 Nazarena Wambura.</br>
-[Github](https://github.com/nazarena254)
+[Github Account](https://github.com/nazarena254)
 
 <!-- ### Homepage
 ![nazzblog](./picture/static/images/nazgallery.png)
@@ -62,25 +62,24 @@ Nazarena Wambura.</br>
 
 
 ## Setup/Installation Requirements
-1. clone repository
+1. Create a folder and cd to it.
+2. Clone the repository below with the command `git clone <https option url> .`  <br>
     https://github.com/nazarena254/InstagramClone  
-2. Move to the folder and install requirements
-    cd instagram
-    pip install -r requirements.txt
-3.  Type code . or atom . based on the text editor you have and work on it.   
+3. Install dependencies in the requirements.txt file `pip install -r requirements.txt` .
+4.  Type code . or atom . based on the text editor you have and work on it.   
 
-### Database
+## Database
 1. Set up Database,and put your username and password in the code
 2. Make migrations
     python3 manage.py makemigrations picture
 3. Migrate
    python3 manage.py migrate 
        
-### Running the Application
-1. Run main apllication
-   * python3 manage.py runserver
+## Running the Application
+1. Run main aplication  ###### python version will vary in future
+   * python3.9 manage.py runserver
 
-### Creating Admins
+## Creating Admins
 1. Creating Admin Locally
     python manage.py createsuperuser. Then set username, email & password
 
@@ -88,18 +87,17 @@ Nazarena Wambura.</br>
      heroku run python manage.py createsuperuser. Then set username, email & password
 
 ## Technologies Used
-* Python3.9.2
-* Django4.0.5
-* Bootstrap
-* Sqlite
-* Cloudinary
-* Heroku
-* Markdown
+* Python3.9.2 - as backend language
+* Django4.0.5 - as a Framework
+* Bootstrap4 - for responsiveness & styling 
+* Sqlite - as database
+* Cloudinary - as cloud-based image storage server
+* Heroku - for deploying app
 
 ## Support & Contact Information
 For any further inquiries, bugs, contributions or comments, reach me at:<br>
 Email:<nancyngunjiri1@gmail.com>
 
-### License
-[MIT License](https://github.com/nazarena254/InstagramClone/blob/master/LICENSE)
+## License
+[MIT License](https://github.com/nazarena254/InstagramClone/blob/master/LICENSE)<br>
 Copyright (c) 2021 **Nazarena Wambura**
