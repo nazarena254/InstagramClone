@@ -111,7 +111,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 #cloudinary configurations
-
 cloudinary.config( 
   cloud_name = config('CLOUDINARY_NAME'), 
   api_key = config('CLOUDINARY_API_KEY'), 
