@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'insta',
     'bootstrap4',
     'crispy_forms',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -98,11 +99,12 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 #cloudinary configurations
-CLOUDINARY_STORAGE = { 
-                        'CLOUD_NAME': config('CLOUDINARY_NAME'),
-                        'API_KEY': config('CLOUDINARY_API_KEY'),
-                        'API_SECRET': config('CLOUDINARY_API_SECRET'),
-                    }
+
+cloudinary.config( 
+  cloud_name = config('CLOUDINARY_NAME'), 
+  api_key = config('CLOUDINARY_API_KEY'), 
+  api_secret = config('CLOUDINARY_API_SECRET') 
+)                  
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
