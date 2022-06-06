@@ -72,7 +72,8 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 DEBUG=config('DEBUG')
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY=config('SECRET_KEY')
+# SECRET_KEY=config('SECRET_KEY')
+SECRET_KEY='django-insecure-o)gd_(chxt5@p557m*i(6j1!)o83bu9+v^@s*#^5i)a6&67i_w'
 
 MODE=config("MODE", default="dev")
 
