@@ -83,8 +83,8 @@ ALLOWED_HOSTS='nazinstagram.herokuapp.com'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-config('MODE')=="dev"
-DATABASES = {
+if config('MODE')=="dev":
+    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': config('DB_NAME'),
@@ -94,13 +94,13 @@ DATABASES = {
            'PORT': 5432,
        }      
    }
-# # production
-# else:
-#    DATABASES = {
-#        'default': dj_database_url.config(
-#            default=config('DATABASE_URL')
-#        )
-#    }
+# production
+else:
+   DATABASES = {
+       'default': dj_database_url.config(
+           default=config('DATABASE_URL')
+       )
+   }
 
 # Email configurations
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
