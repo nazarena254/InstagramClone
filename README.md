@@ -7,12 +7,15 @@ This is a Django web application. It is a clone of the instagram website. A user
 Nazarena Wambura.</br>
 [Github Account](https://github.com/nazarena254)
 
-<!-- ### Homepage
-![nazzblog](./picture/static/images/nazgallery.png)
+### Homepage
+![nazinstagram](./static/images/myhomepg.png)
 ### Wireframe sample
-![nazzblog](./picture/static/images/wirefrm.jpeg)
+![nazinstagram](./static/images)
 ### Admin panel
-![nazzblog](./picture/static/images/djangoAdmin.png) -->
+![nazinstagram](./static/images/myadmin.png)
+### Signup/login
+![nazinstagram](./static/images/login.png)
+
 
 ## User Story
 1. Sign in to the application to start using.
