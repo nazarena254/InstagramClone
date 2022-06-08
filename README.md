@@ -9,12 +9,10 @@ Nazarena Wambura.</br>
 
 ### Homepage
 ![nazinstagram](./insta/static/images/myhomepg.png)
-<!-- ### Wireframe sample
-![nazinstagram](./insta/static/images/myhomepg.png) -->
 ### Admin panel
 ![nazinstagram](./insta/static/images/myadmin.png)
-
-
+### Wireframe sample
+![nazinstagram](wireframe.png)
 
 ## User Story
 1. Sign in to the application to start using.
