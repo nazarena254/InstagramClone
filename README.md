@@ -8,13 +8,12 @@ Nazarena Wambura.</br>
 [Github Account](https://github.com/nazarena254)
 
 ### Homepage
-![nazinstagram](./static/images/myhomepg.png)
-### Wireframe sample
-![nazinstagram](./static/images)
+![nazinstagram](./insta/static/images/myhomepg.png)
+<!-- ### Wireframe sample
+![nazinstagram](./insta/static/images/myhomepg.png) -->
 ### Admin panel
-![nazinstagram](./static/images/myadmin.png)
-### Signup/login
-![nazinstagram](./static/images/login.png)
+![nazinstagram](./insta/static/images/myadmin.png)
+
 
 
 ## User Story
